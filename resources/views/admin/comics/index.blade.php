@@ -44,7 +44,7 @@
                                 </button>
                         <div class="dropdown-menu" aria-labelledby="triggerId">
                             <a class="dropdown-item" href="{{ route('admin.comics.show', $comic) }}">Visualizza</a>
-                            <a class="dropdown-item" href="#">Mdoifica</a>
+                            <a class="dropdown-item" href="{{route('admin.comics.edit', $comic)}}">Mdoifica</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Cancella</a>
                         </div>
