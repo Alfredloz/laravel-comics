@@ -14,6 +14,8 @@
                 <th>Data di rilascio</th>
                 <th>Copertina</th>
                 <th>Disponibilità</th>
+                <th>Azioni</th>
+
             </tr>
         </thead>
         <tbody>
@@ -34,7 +36,22 @@
                        non disponibile
                    @endif
                    </td>
+                   <td>
+                    <div class="dropdown open">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                    opzioni
+                                </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="{{ route('admin.comics.show', $comic) }}">Visualizza</a>
+                            <a class="dropdown-item" href="#">Mdoifica</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Cancella</a>
+                        </div>
+                    </div>
+                </td>
             </tr>
+            
             @endforeach
         </tbody>
     </table>
