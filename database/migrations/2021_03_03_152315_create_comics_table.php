@@ -28,7 +28,7 @@ class CreateComicsTable extends Migration
             $table->string('rating')->nullable();
             $table->string('slug')->unique();
             $table->string('cover')->nullable();
-            $table->boolean('available')->default(true)->change();
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }
