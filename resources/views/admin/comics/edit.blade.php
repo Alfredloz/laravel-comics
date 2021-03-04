@@ -1,11 +1,11 @@
 @extends('layouts.app') 
 @section('content')
-  <form action="" method="put" enctype="multipart/form-data">
+  <form action="{{ route('admin.comics.update', $comic) }}" method="post" enctype="multipart/form-data">
+    @csrf
 
-  @csrf
-    @method('POST')
+    @method('PATCH')
+    
       <div class="container">
-          <form>
               <div class="form-group row">
                   <label for="title" class="col-sm-1-12 col-form-label">Titolo:</label>
                   <div class="col-sm-1-12 col-md-12">
@@ -16,7 +16,7 @@
                   </div>
                   <label for="description" class="col-sm-1-12 col-form-label">Descrizone:</label>
                   <div class="col-sm-1-12 col-lg-12">
-                      <textarea name="description" id="description_comic" cols="100" rows="10" >{{$comic->description}}</textarea>
+                      <textarea name="description" id="description_comic" cols="100" rows="10" >{{ $comic->description }}</textarea>
                         @error('description')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -69,20 +69,22 @@
                             <div class="col-md-3">
                                 <input type="radio" class="form-check-input" name="available" id="" value="0">
                                 <label class="form-check-label" for="no">No</label>
-                            </div>
-                            
-                            
+                            </div>          
                     </div>
                       
+                    <div class="form-group">
+                      <label for="cover">Carica Immagine</label>
+                      <input type="file" class="form-control-file" name="cover" id="" placeholder="carica la tua immagine" aria-describedby="fileHelpId">
+                      <small id="fileHelpId" class="form-text text-muted">Carica la tua immagine</small>
+                    </div>
                 </div>
               </div>
 
               <div class="form-group row">
                   <div class="offset-sm-2 col-sm-10">
-                      <button type="submit" class="btn btn-primary">Aggiorna</button>
+                    <input type="submit" value="aggiorna">
                   </div>
+                </div>
               </div>
-          </form>
-      </div>
   </form>
 @endsection

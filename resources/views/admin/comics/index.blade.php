@@ -7,12 +7,10 @@
             <tr>
                 <th>id Comic</th>
                 <th>Comic title</th>
-                <th>Description</th>
                 <th>Artist</th>
                 <th>Writer</th>
                 <th>Price</th>
                 <th>Data di rilascio</th>
-                <th>Copertina</th>
                 <th>Disponibilità</th>
                 <th>Azioni</th>
 
@@ -23,12 +21,10 @@
             <tr>
                <td>{{$comic->id}}</td>
                <td>{{$comic->title}}</td>
-               <td>{{$comic->description}}</td>
                <td>{{$comic->art_by}}</td>
                <td>{{$comic->written_by}}</td>
                <td>{{$comic->price}}</td>
                <td>{{$comic->release_date}}</td>
-               <td>{{$comic->cover}}</td>
                <td>
                    @if ($comic->available == 1) 
                        disponibile

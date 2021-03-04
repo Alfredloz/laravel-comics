@@ -15,7 +15,7 @@
             <h5>Prezzo: </h5>
             <dd>{{ $comic->price}} €</dd>
             <h5>Data di rilascio: </h5>
-            <dd>{{ $comic->release_date}}</dd>
+            <dd>{{ $comic->release_date }}</dd>
             <h5>Volume </h5>
             <dd>{{ $comic->volume}}</dd>
             <h5>Formato </h5>
