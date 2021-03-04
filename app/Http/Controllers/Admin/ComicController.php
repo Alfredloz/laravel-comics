@@ -14,8 +14,10 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $comics = Comic::all();
+        // dd($comics);
+        return view('admin.comics.index', compact('comics'));
     }
 
     /**
