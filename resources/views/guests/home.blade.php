@@ -3,11 +3,15 @@
     
 @endsection
 @section('main')
-    <h1>Comics</h1>
+    <h1 class="title">Comics</h1>
     <div class="comic_banner">
         @foreach ($comics as $comic)
-            <img src="{{asset('storage/' . $comic->cover )}}" alt="">
-            <a href="{{ route('comic', $comic) }}" class="link_comic">Vai al fumetto</a>
+            
+            <div class="card_comic">
+                <a href="{{ route('comic', $comic) }}">
+                    <img src="{{asset('storage/' . $comic->cover )}}" alt="">
+                </a>
+            </div>
         @endforeach
     </div>
 @endsection

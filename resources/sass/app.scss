@@ -12,14 +12,19 @@ nav{
     position: relative;
     img{
     position: absolute;
+    margin: 1rem;
     }
+}
+h1{
+    text-align: center;
+    margin: 3rem;
 }
 ul.first_nav, ul.second_nav{
 
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
-    height: 4rem;
+    height: 6rem;
     align-items: center;
     margin: 0;
     li{
@@ -30,11 +35,35 @@ ul.first_nav{
     background-color: $blue;
 }
 
+// main section guest
+
+.comic_banner{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    align-items: center;
+    height: 500px;
+    .card_comic{
+        a{
+             
+            img{
+                transition: 0.2s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                    
+                }
+            }
+        }
+    }
+}
+
 
 // footer section
 .footer_list{
     display: flex;
     height: 20rem;
+    background-image: url('../../public/img/footer-bg.jpeg');
+    // background-image: url('img/footer-bg.jpg');
 }
 .banner_footer{
 
@@ -55,6 +84,4 @@ ul.first_nav{
         }
     }
 }
-.link_comic{
 
-}    

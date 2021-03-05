@@ -10950,6 +10950,12 @@ nav {
 
 nav img {
   position: absolute;
+  margin: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
 }
 
 ul.first_nav,
@@ -10957,7 +10963,7 @@ ul.second_nav {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  height: 4rem;
+  height: 6rem;
   align-items: center;
   margin: 0;
 }
@@ -10971,9 +10977,26 @@ ul.first_nav {
   background-color: #3490dc;
 }
 
+.comic_banner {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  align-items: center;
+  height: 500px;
+}
+
+.comic_banner .card_comic a img {
+  transition: 0.2s ease-in-out;
+}
+
+.comic_banner .card_comic a img:hover {
+  transform: scale(1.2);
+}
+
 .footer_list {
   display: flex;
   height: 20rem;
+  background-image: url(/images/footer-bg.jpeg?dfd68d2946f211e1b678af05fd2f830b);
 }
 
 .banner_footer {
