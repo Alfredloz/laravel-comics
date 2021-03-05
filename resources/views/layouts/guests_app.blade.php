@@ -79,10 +79,10 @@
                <button><strong>SIGN-UP NOW!</strong></button>
                <ul>
                    <li> <strong>FOLLOW US</strong> </li>
-                   <li>TWITTER</li>
-                   <li>FB</li>
-                   <li>YOUTUBE</li>
-                   <li>PINTEREST</li>
+                   <li><a href=""><img src="{{ asset('img/footer-facebook.png') }}" alt=""></a></li>
+                   <li><a href=""><img src="{{ asset('img/footer-pinterest.png') }}" alt=""></a></li>
+                   <li><a href=""><img src="{{ asset('img/footer-twitter.png') }}" alt=""></a></li>
+                   <li><a href=""><img src="{{ asset('img/footer-youtube.png') }}" alt=""></a></li>
                </ul>
            </div>
            @yield('footer')
