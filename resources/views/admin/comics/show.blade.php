@@ -5,6 +5,7 @@
         <img class="card-img-top" src="" alt="">
         <div class="card-body">
             <h1>Titolo:</h1>
+            <img src="{{asset('storage/' . $comic->banner )}}" alt="" id="banner_img">
             <img src="{{asset('storage/' . $comic->cover )}}" alt="">
             <h4 class="card-title">{{$comic->title}}</h4>
             <h2>Descrizione: </h2>

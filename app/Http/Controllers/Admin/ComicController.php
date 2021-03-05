@@ -99,17 +99,20 @@ class ComicController extends Controller
             'page_content' => 'nullable',
             'rating' => 'nullable',
             'cover' => 'nullable | image | max:700',
-            'banner' => 'nullable | image | max:700',
+            'banner' => 'nullable | image | max:900',
             'available' => 'nullable',
             ]);
-            if ($request->cover || $request->banner) {
+            if ($request->cover  ) {
                 Storage::delete($comic->cover);
-                Storage::delete($comic->banner);
                 // img cover storage
                 $cover = Storage::disk('public')->put('cover_imgs', $request->cover);
                 $data['cover'] = $cover;
+               
+            }
+            if ($request->banner) {
+                Storage::delete($comic->banner);
                 // banner img storage
-                $banner = Storage::disk('public')->put('banner_imgs', $request->banner);
+                $banner = Storage::disk('public')->put('cover_imgs', $request->banner);
                 $data['banner'] = $banner;
             }
             $comic->update($data);

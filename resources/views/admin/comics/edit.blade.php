@@ -82,6 +82,9 @@
                       <h2>Carica immagine del banner</h2>
                       <label for="banner">Cover Image</label>
                       <input type="file" class="form-control-file" name="banner" id="banner" placeholder="Add a cover banner" aria-describedby="coverImgHelper">
+                      @error('banner')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                       <small id="coverBanrHelper" class="form-text text-muted">Add a cover banner</small>
                   </div>
                 </div>
