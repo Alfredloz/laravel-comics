@@ -16,7 +16,7 @@
                   </div>
                   <label for="description" class="col-sm-1-12 col-form-label">Descrizone:</label>
                   <div class="col-sm-1-12 col-lg-12">
-                      <textarea name="description" id="description_comic" cols="100" rows="10" >{{ $comic->description }}</textarea>
+                      <textarea name="description" id="description" cols="100" rows="10" >{{ $comic->description }}</textarea>
                         @error('description')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror

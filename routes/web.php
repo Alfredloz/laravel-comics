@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GuestController@home')->name('home');
+Route::get('comics/{comic}', 'GuestController@show')->name('comic');
+Route::get('/contacts', 'GuestController@contacts')->name('contacts');
 
 Auth::routes();
 

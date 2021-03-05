@@ -10944,3 +10944,55 @@ a.text-dark:focus {
   }
 }
 
+nav {
+  position: relative;
+}
+
+nav img {
+  position: absolute;
+}
+
+ul.first_nav,
+ul.second_nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  height: 4rem;
+  align-items: center;
+  margin: 0;
+}
+
+ul.first_nav li,
+ul.second_nav li {
+  margin: 2rem;
+}
+
+ul.first_nav {
+  background-color: #3490dc;
+}
+
+.footer_list {
+  display: flex;
+  height: 20rem;
+}
+
+.banner_footer {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner_footer button {
+  height: 80%;
+}
+
+.banner_footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.banner_footer ul li {
+  margin: 1rem;
+}
+

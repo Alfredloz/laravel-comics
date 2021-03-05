@@ -6,3 +6,55 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// layout guest app
+nav{
+    position: relative;
+    img{
+    position: absolute;
+    }
+}
+ul.first_nav, ul.second_nav{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    height: 4rem;
+    align-items: center;
+    margin: 0;
+    li{
+        margin: 2rem;
+    }
+}
+ul.first_nav{
+    background-color: $blue;
+}
+
+
+// footer section
+.footer_list{
+    display: flex;
+    height: 20rem;
+}
+.banner_footer{
+
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button{
+        height: 80%;
+    }
+    ul{
+        // width: 50%;
+        list-style-type: none;
+        display: flex;
+        li{
+            margin: 1rem;
+        }
+    }
+}
+.link_comic{
+
+}    
