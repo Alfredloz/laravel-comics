@@ -73,10 +73,17 @@
                     </div>
                       
                     <div class="form-group">
+                      <h2>Carica immagine del fumetto</h2>
                       <label for="cover">Carica Immagine</label>
                       <input type="file" class="form-control-file" name="cover" id="" placeholder="carica la tua immagine" aria-describedby="fileHelpId">
                       <small id="fileHelpId" class="form-text text-muted">Carica la tua immagine</small>
                     </div>
+                    <div class="form-group">
+                      <h2>Carica immagine del banner</h2>
+                      <label for="banner">Cover Image</label>
+                      <input type="file" class="form-control-file" name="banner" id="banner" placeholder="Add a cover banner" aria-describedby="coverImgHelper">
+                      <small id="coverBanrHelper" class="form-text text-muted">Add a cover banner</small>
+                  </div>
                 </div>
               </div>
 

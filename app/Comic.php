@@ -21,6 +21,7 @@ class Comic extends Model
         'slug',
         'cover',
         'available',
+        'banner'
     ];
 
     public function getRouteKeyName()
