@@ -15,6 +15,9 @@ class CreateFakerComicsTable extends Migration
     {
         Schema::create('faker_comics', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
+            $table->string('title');
+            $table->text('about');
             $table->timestamps();
         });
     }

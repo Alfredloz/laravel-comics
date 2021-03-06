@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Comic;
+use App\FakerComic;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -10,7 +11,9 @@ class GuestController extends Controller
     {   
         $fewComics = Comic::take(4)->get();
         $comics = Comic::all();
-        return view('guests.home', compact('comics', 'fewComics'));
+        $fakeComics = FakerComic::all();
+        $fake_3 = FakerComic::take(4)->get();
+        return view('guests.home', compact('comics', 'fewComics', 'fakeComics', 'fake_3'));
     }
     public function show(Comic $comic)
     {
