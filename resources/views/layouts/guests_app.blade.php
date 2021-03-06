@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <!-- Styles -->
@@ -76,6 +78,8 @@
                    <li>Movies</li>
                    <li>TV</li>
                </ul>
+               <img class="logo_footer" src="{{ asset('img/logo_footer.png')  }}" alt="">
+
            </div>
            <div class="banner_footer">
                <button><strong>SIGN-UP NOW!</strong></button>

@@ -4,17 +4,29 @@
 // Variables
 @import 'variables';
 
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Francois One', sans-serif;
+}
+// partials
 
-
+@import 'partials/faker_home.scss';
+// single comic partials
+@import 'partials/single_comic.scss';
 // utilities classes
 
 .d_flex{
     display: flex;
 }
 // /utilities classes
-
+.txt_upp{
+    text-transform: uppercase;
+}
 
 // layout guest app header
 .title_home{
@@ -70,7 +82,7 @@ ul.first_nav{
 // main section guest
 
 .comic_banner{
-    background-color: rgb( 29,	33,	39	);
+    background-color: rgb( 21,	21,	21	);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,40 +122,68 @@ ul.first_nav{
 
 // footer section
 .footer_list{
+    position: relative;
     display: flex;
-    height: 20rem;
+    height: 30rem;
     background-image: url('../../public/img/footer-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     padding: 2rem;
+    z-index: 0;
     ul{
-
+        padding: 1rem;
         list-style-type: none;
+        .str_white{
+            text-decoration: underline white;
+            font-size: 20px;
+        }
     }
-
-    .str_white{
-        text-decoration: underline white;
-        font-size: 15px;
-        font-weight: bold;
+    .logo_footer{
+        opacity: 0.8;
+        z-index: 1;
+        position: absolute;
+        transform: scale(0.9);
+        right: 0;
+        top: 0;
+        padding-right: 3rem;
     }
 }
 
 .banner_footer{
-
+    z-index: 2;
+    position: relative;
+    background-color: rgb(36, 36, 36);
     height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     button{
-        height: 80%;
+        padding: 1rem;
+        color: white;
+        background-color: transparent;
+        border: 1px solid $blue;
+        margin-left: 2rem;
+
+        &:hover{
+
+            color: $blue;
+            background-color: white;
+
+        }
     }
     ul{
-        // width: 50%;
+        li:first-child{
+            color: white;
+            font-size: 1.5rem;
+        }
         list-style-type: none;
         display: flex;
         li{
             margin: 1rem;
         }
     }
+    
 }
 

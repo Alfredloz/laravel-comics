@@ -3,7 +3,12 @@
     <h1>Single Comic</h1>
 @endsection
 @section('main')
-<img src="{{ asset('storage/' . $comic->cover) }}" alt="">
+<div class="banner_box">
+    <img src="{{ asset('storage/' . $comic->banner) }}" alt="">
+</div>
+<div class="cover_box">
+    <img src="{{ asset('storage/' . $comic->cover) }}" alt="">
+</div>
 
 <div class="card_info">
     <h2>{{ $comic->title  }}</h2>
