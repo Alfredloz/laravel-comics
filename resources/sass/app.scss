@@ -7,54 +7,102 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// layout guest app
-nav{
+
+// utilities classes
+
+.d_flex{
+    display: flex;
+}
+// /utilities classes
+
+
+// layout guest app header
+.title_home{
     position: relative;
-    img{
-    position: absolute;
-    margin: 1rem;
+    h1{ 
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem;
+        font-size: 2.5rem;
+        position: absolute;
+        text-align: center;
+        margin: 3rem;
+        background-color: $blue;
+        transform: translate(5rem, -4.5rem);
     }
 }
-h1{
-    text-align: center;
-    margin: 3rem;
+.second_nav_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    img{
+        justify-self: flex-start;
+        margin-right: auto;
+    }
+    ul.second_nav{
+        li{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-right: 4rem;
+        }
+    }
 }
 ul.first_nav, ul.second_nav{
-
     list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    height: 6rem;
-    align-items: center;
     margin: 0;
-    li{
-        margin: 2rem;
-    }
+
 }
 ul.first_nav{
     background-color: $blue;
+    justify-content: flex-end;
+    li{
+        padding: 2rem 8rem;
+        display: flex;
+        align-items: center;
+        
+    }
+    img{
+        height: 3rem;
+    }
 }
 
 // main section guest
 
 .comic_banner{
+    background-color: rgb( 29,	33,	39	);
     display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
+    justify-content: center;
     align-items: center;
     height: 500px;
+    // position: relative;
     .card_comic{
+        position: relative;
+
         a{
-             
             img{
+                height: 20rem;
+                width: auto;
+                // margin: 1rem;
+                margin: 0 2rem;
                 transition: 0.2s ease-in-out;
+                opacity: 0.8;
                 &:hover{
-                    transform: scale(1.2);
+                    opacity: 1;
                     
                 }
             }
         }
+        .title_card{
+            position: absolute;
+            color: white;
+            padding: 0.3rem;
+            background-color: $blue;
+            top: 0;
+            left: calc(12% - 0.3rem);
+        }
     }
+
 }
 #banner_img{
     transform: scale(0.4);
@@ -65,8 +113,20 @@ ul.first_nav{
     display: flex;
     height: 20rem;
     background-image: url('../../public/img/footer-bg.jpeg');
+    color: white;
+    padding: 2rem;
+    ul{
 
+        list-style-type: none;
+    }
+
+    .str_white{
+        text-decoration: underline white;
+        font-size: 15px;
+        font-weight: bold;
+    }
 }
+
 .banner_footer{
 
     height: 6rem;

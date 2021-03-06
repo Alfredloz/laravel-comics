@@ -29,16 +29,18 @@
             @endif
 
         <nav>
-            <ul class="first_nav">
-                <li>Dc</li>
-                <li>Comic</li>
-                <li>Community</li>
+            <ul class="first_nav d_flex">
+                <li><img src="{{asset('img/DCUI_desktop.svg')}}" alt=""></li>
+                <li><img src="{{asset('img/hbo_desktop.svg')}}" alt=""></li>
+                <li><img src="{{asset('img/buy-bar-DCUI.svg')}}" alt=""></li>
             </ul>
-             <img class="logo_app" src="{{asset('img/logo.png')}}" alt="">  
-            <ul class="second_nav">
-                <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('contacts') }}">Contact</a></li>
-            </ul>
+             <div class="second_nav_box">
+                <img class="logo_app" src="{{asset('img/logo.png')}}" alt="">  
+                <ul class="second_nav d_flex">
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('contacts') }}">Contact</a></li>
+                </ul>
+             </div>
         </nav>
         @yield('header')
        </header>
@@ -48,7 +50,7 @@
        <footer>
            <div class="footer_list">
                <ul>
-                   <li><strong>DC COMICS</strong></li>
+                   <li class="str_white"><strong>DC COMICS</strong></li>
                    <li>Characters</li>
                    <li>Movies</li>
                    <li>TV</li>
@@ -57,18 +59,18 @@
                    <li>Movies</li>
                    <li>TV</li>
                    <li>News</li>
-                   <li><strong>Another COMICS</strong></li>
+                   <li class="str_white"><strong>Another COMICS</strong></li>
                    <li>Characters</li>
                    <li>Movies</li>
                </ul>
                <ul>
-                   <li><Strong>DC</Strong></li>
+                   <li class="str_white"><Strong>DC</Strong></li>
                    <li>Movies</li>
                    <li>TV</li>
                    <li>News</li>
                </ul>
                <ul>
-                   <li><strong>SITES</i></strong></li>
+                   <li class="str_white"><strong>SITES</i></strong></li>
                    <li>News</li>
                    <li>Characters</li>
                    <li>Movies</li>
@@ -79,10 +81,10 @@
                <button><strong>SIGN-UP NOW!</strong></button>
                <ul>
                    <li> <strong>FOLLOW US</strong> </li>
-                   <li><a href=""><img src="{{ asset('img/footer-facebook.png') }}" alt=""></a></li>
-                   <li><a href=""><img src="{{ asset('img/footer-pinterest.png') }}" alt=""></a></li>
-                   <li><a href=""><img src="{{ asset('img/footer-twitter.png') }}" alt=""></a></li>
-                   <li><a href=""><img src="{{ asset('img/footer-youtube.png') }}" alt=""></a></li>
+                   <li><a href="https://www.facebook.com"><img src="{{ asset('img/footer-facebook.png') }}" alt=""></a></li>
+                   <li><a href="https://www.pinterest.it"><img src="{{ asset('img/footer-pinterest.png') }}" alt=""></a></li>
+                   <li><a href="https://twitter.com"><img src="{{ asset('img/footer-twitter.png') }}" alt=""></a></li>
+                   <li><a href="https://www.youtube.com"><img src="{{ asset('img/footer-youtube.png') }}" alt=""></a></li>
                </ul>
            </div>
            @yield('footer')

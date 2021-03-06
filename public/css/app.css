@@ -10944,59 +10944,119 @@ a.text-dark:focus {
   }
 }
 
-nav {
+.d_flex {
+  display: flex;
+}
+
+.title_home {
   position: relative;
 }
 
-nav img {
+.title_home h1 {
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 2.5rem;
   position: absolute;
-  margin: 1rem;
-}
-
-h1 {
   text-align: center;
   margin: 3rem;
+  background-color: #3490dc;
+  transform: translate(5rem, -4.5rem);
+}
+
+.second_nav_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+.second_nav_box img {
+  justify-self: flex-start;
+  margin-right: auto;
+}
+
+.second_nav_box ul.second_nav li {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-right: 4rem;
 }
 
 ul.first_nav,
 ul.second_nav {
   list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  height: 6rem;
-  align-items: center;
   margin: 0;
-}
-
-ul.first_nav li,
-ul.second_nav li {
-  margin: 2rem;
 }
 
 ul.first_nav {
   background-color: #3490dc;
+  justify-content: flex-end;
+}
+
+ul.first_nav li {
+  padding: 2rem 8rem;
+  display: flex;
+  align-items: center;
+}
+
+ul.first_nav img {
+  height: 3rem;
 }
 
 .comic_banner {
+  background-color: #1d2127;
   display: flex;
-  justify-content: space-around;
-  border: 1px solid black;
+  justify-content: center;
   align-items: center;
   height: 500px;
 }
 
+.comic_banner .card_comic {
+  position: relative;
+}
+
 .comic_banner .card_comic a img {
+  height: 20rem;
+  width: auto;
+  margin: 0 2rem;
   transition: 0.2s ease-in-out;
+  opacity: 0.8;
 }
 
 .comic_banner .card_comic a img:hover {
-  transform: scale(1.2);
+  opacity: 1;
+}
+
+.comic_banner .card_comic .title_card {
+  position: absolute;
+  color: white;
+  padding: 0.3rem;
+  background-color: #3490dc;
+  top: 0;
+  left: calc(12% - 0.3rem);
+}
+
+#banner_img {
+  transform: scale(0.4);
 }
 
 .footer_list {
   display: flex;
   height: 20rem;
   background-image: url(/images/footer-bg.jpeg?dfd68d2946f211e1b678af05fd2f830b);
+  color: white;
+  padding: 2rem;
+}
+
+.footer_list ul {
+  list-style-type: none;
+}
+
+.footer_list .str_white {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .banner_footer {
