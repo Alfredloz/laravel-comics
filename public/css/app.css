@@ -11036,7 +11036,7 @@ a.text-dark:focus {
   transition: 0.8s ease-in-out;
 }
 
-.banner_box:hover {
+.banner_box:active {
   height: 40rem;
 }
 
@@ -11046,9 +11046,93 @@ a.text-dark:focus {
   background-color: #3490dc;
 }
 
-.cover_box img {
+.cover_box .card_img {
   position: absolute;
   transform: translate(60%, -85%);
+}
+
+.infoComic {
+  width: 85%;
+  margin: auto;
+}
+
+.infoComic h2 {
+  font-size: 3.5rem;
+}
+
+.infoComic .infoContent {
+  width: 60%;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.infoComic .infoContent .priceAvailable {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.infoComic .infoContent .priceAvailable .price,
+.infoComic .infoContent .priceAvailable .available {
+  padding: 0.5rem;
+}
+
+.infoComic P {
+  padding-top: 1rem;
+  width: 60%;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.spec_section {
+  margin-top: 5rem;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.spec_section .spec_table {
+  margin-top: 5rem;
+}
+
+.spec_section .title_table {
+  font-size: 1.3rem;
+}
+
+.show_comic h1,
+.show_comic h2 {
+  text-align: center;
+}
+
+.images_box {
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: #6cb2eb;
+}
+
+.images_box h3 {
+  text-align: center;
+}
+
+#banner_img {
+  width: 40rem;
+  height: auto;
+  padding: 1rem;
+}
+
+#comic_img {
+  padding: 1rem;
+}
+
+#banner_img,
+#comic_img {
+  opacity: 0.8;
+}
+
+#banner_img:hover,
+#comic_img:hover {
+  opacity: 1;
 }
 
 .d_flex {
@@ -11145,10 +11229,6 @@ ul.first_nav img {
   background-color: #3490dc;
   top: 0;
   left: calc(12% - 0.3rem);
-}
-
-#banner_img {
-  transform: scale(0.4);
 }
 
 .footer_list {

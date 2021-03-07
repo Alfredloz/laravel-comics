@@ -1,0 +1,30 @@
+.show_comic{
+    h1, h2{
+        text-align: center;
+    }
+    
+}
+// ids
+.images_box{
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    h3{
+        text-align: center;
+    }
+    background-color: $cyan;
+}
+#banner_img{
+   width: 40rem;
+   height: auto;
+   padding: 1rem;
+}
+#comic_img{
+    padding: 1rem;
+}
+#banner_img, #comic_img{
+    opacity: 0.8;
+    &:hover{
+        opacity: 1;
+    }
+}

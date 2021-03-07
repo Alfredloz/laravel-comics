@@ -18,6 +18,10 @@
 @import 'partials/faker_home.scss';
 // single comic partials
 @import 'partials/single_comic.scss';
+
+// !admin
+@import 'partials/admin/show.scss';
+// !/admin
 // utilities classes
 
 .d_flex{
@@ -115,9 +119,6 @@ ul.first_nav{
         }
     }
 
-}
-#banner_img{
-    transform: scale(0.4);
 }
 
 // footer section

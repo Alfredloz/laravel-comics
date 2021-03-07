@@ -1,6 +1,9 @@
 @extends('layouts.app')
-
+@section('title_app')
+    ALL COMICS ADMIN
+@endsection
 @section('content')
+    <button class="btn-primary btn btn-block"><a class="text-white" href="{{ route('admin.comics.create')}}">AGGIUNGI NUOVO COMIC <i class="far fa-plus-square"></i> </a></button>
     <h1 class="text-center">Elenco fumetti</h1>
     <table class="table">
         <thead>
@@ -34,15 +37,19 @@
                    </td>
                    <td>
                     <div class="dropdown open">
-                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                        <button class="btn btn-secondary btn-sm dropdown-toggle btn-info" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                     opzioni
                                 </button>
                         <div class="dropdown-menu" aria-labelledby="triggerId">
                             <a class="dropdown-item" href="{{ route('admin.comics.show', $comic) }}">Visualizza</a>
-                            <a class="dropdown-item" href="{{route('admin.comics.edit', $comic)}}">Mdoifica</a>
+                            <a class="dropdown-item" href="{{route('admin.comics.edit', $comic)}}">Modifica</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cancella</a>
+                            <form action="{{ route('admin.comics.destroy', $comic) }} " method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Cancella" class="btn btn-danger btn-block">    
+                            </form>
                         </div>
                     </div>
                 </td>

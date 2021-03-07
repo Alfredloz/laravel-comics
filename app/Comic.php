@@ -8,7 +8,7 @@ class Comic extends Model
 {
     protected $fillable = [
         'title',
-        'desciption',
+        'description',
         'art_by',
         'written_by',
         'series',

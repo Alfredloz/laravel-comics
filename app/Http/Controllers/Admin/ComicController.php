@@ -29,7 +29,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.comics.create');
     }
 
     /**
@@ -39,21 +39,38 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $request['slug'] = Str::slug($request->title);
         $data = $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'price' => 'required | numeric',
-            'trim_size' => 'required',
+            'art_by' => 'required',
+            'written_by' => 'required',
+            'series' => 'required',
+            'price' => 'required',
+            'release_date' => 'required',
+            'volume' => 'required',
+            'trim_size' => 'nullable',
             'page_content' => 'nullable',
-            'rating' => 'required',
-            'cover' => 'required | image | max:700',
+            'rating' => 'nullable',
+            'slug' => 'required',
+            'cover' => 'nullable | image | max:700',
+            'banner' => 'nullable | image | max:900',
             'available' => 'nullable',
-        ]);
-        $cover = Storage::put('cover_imgs', $request->cover);
-        $data['cover'] = $cover;
+            ]);
+            if ($request->cover  ) {
+                // img cover storage
+                $cover = Storage::disk('public')->put('cover_imgs', $request->cover);
+                $data['cover'] = $cover;
+               
+            }
+            if ($request->banner) {
+                // banner img storage
+                $banner = Storage::disk('public')->put('cover_imgs', $request->banner);
+                $data['banner'] = $banner;
+            }
         Comic::create($data);
-        $new_comic = Comic::all();
+        $new_comic = Comic::orderBy('id', 'desc')->first();
         return redirect()->route('admin.comics.show', $new_comic);
 
     }
@@ -127,6 +144,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('admin.comics.index');
     }
 }
